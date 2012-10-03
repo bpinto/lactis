@@ -1,0 +1,9 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: <%= ENV['PG_DATABASE'] %>
+  host: <%= ENV['PG_HOST'] %>
+  username: <%= ENV['PG_USERNAME'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+  pool: 5
+  port: 4321
