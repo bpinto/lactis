@@ -17,7 +17,7 @@ group :assets do
 end
 
 group :test, :development do
-  gem 'rspec'
+  gem 'rspec-rails', '~> 2.0'
   gem 'spinach-rails'
 end
 
