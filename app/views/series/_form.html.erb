@@ -1,0 +1,13 @@
+<%= form_for @series, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :exercise, 'Exercício', :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :exercise, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Salvar', :class => 'btn btn-primary' %>
+    <a href='#' class='btn'>Cancelar</a>
+  </div>
+<% end %>

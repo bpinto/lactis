@@ -3,11 +3,11 @@ class CreateSeries < Spinach::FeatureSteps
   end
 
   And 'I\'m creating a workout series' do
-    visit new_series_path
+    @page = Pages::Series::New.visit
   end
 
   When 'I finish it' do
-    pending 'step not implemented'
+    @page.submit
   end
 
   Then 'I should see its exercises' do
