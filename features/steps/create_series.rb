@@ -7,7 +7,7 @@ class CreateSeries < Spinach::FeatureSteps
   end
 
   When 'I complete it' do
-    @page.submit
+    @page.form.submit
   end
 
   Then 'I should see its exercises details' do

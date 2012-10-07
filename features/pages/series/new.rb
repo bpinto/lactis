@@ -2,8 +2,6 @@ class Pages::Series::New < CapybaraPageObject::Page
   path 'series/new'
 
   component (:form) { Components::Form.new find('form') }
-
-  delegate :submit, to: :form
 end
 
 module Components
