@@ -6,5 +6,5 @@ Feature: Create series
   Scenario: Create a workout series
     Given I am a guest
     And I'm creating a workout series
-    When I finish it
-    Then I should see its exercises
+    When I complete it
+    Then I should see its exercises details

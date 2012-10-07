@@ -6,11 +6,11 @@ class CreateSeries < Spinach::FeatureSteps
     @page = Pages::Series::New.visit
   end
 
-  When 'I finish it' do
+  When 'I complete it' do
     @page.submit
   end
 
-  Then 'I should see its exercises' do
+  Then 'I should see its exercises details' do
     pending 'step not implemented'
   end
 end
