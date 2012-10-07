@@ -25,6 +25,7 @@ end
 group :test do
   gem 'capybara-page-object'
   gem 'database_cleaner'
+  gem 'launchy'
 end
 
 gem 'jquery-rails'
