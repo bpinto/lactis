@@ -3,6 +3,8 @@ require './config/environment'
 require 'rspec'
 require 'database_cleaner'
 
+require_relative '../pages/pages.rb'
+
 DatabaseCleaner.strategy = :transaction
 Spinach.hooks.before_scenario { DatabaseCleaner.start }
 Spinach.hooks.after_scenario  { DatabaseCleaner.clean }

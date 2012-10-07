@@ -23,6 +23,7 @@ group :test, :development do
 end
 
 group :test do
+  gem 'capybara-page-object'
   gem 'database_cleaner'
 end
 
