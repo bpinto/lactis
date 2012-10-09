@@ -30,3 +30,30 @@ body {
 //
 // Example:
 // @linkColor: #ff0000;
+
+.box-round(@border) {
+  -webkit-border-radius: @border;
+          border-radius: @border;
+
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.box-rotate(@degrees: 0deg) {
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+
+.box-rotate-origin(@x-axis: 0%, @y-axis: 0%) {
+  -webkit-transform-origin: @x-axis @y-axis;
+     -moz-transform-origin: @x-axis @y-axis;
+      -ms-transform-origin: @x-axis @y-axis;
+       -o-transform-origin: @x-axis @y-axis;
+          transform-origin: @x-axis @y-axis;
+}
+
+.font-xxxlarge {
+  font-size: 18px;
+}
