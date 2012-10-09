@@ -4,6 +4,23 @@ table.worksheet {
   background-color: @grayLighter;
   position: relative;
 
+  thead tr {
+    background-color: @white;
+  }
+
+  thead tr th {
+    padding-bottom: 0;
+  }
+
+  thead tr th span {
+    border: 3px solid darken(@grayLighter, 20%);
+    border-radius: 5px 5px 0 0;
+    display: block;
+    margin-left: -5px;
+    margin-right: -5px;
+    text-align: center;
+  }
+
   thead tr th:first-child {
     .box-rotate(270deg);
     .box-rotate-origin(0%, 100%);
@@ -14,10 +31,11 @@ table.worksheet {
     bottom: 0px;
     color: @white;
     font-variant: small-caps;
+    padding-bottom: 5px; /* default value restored */
     position: absolute;
     text-align: right;
 
-    width: 134px; /* this needs to be calculated by javascript */
+    width: 105px; /* this needs to be calculated by javascript */
   }
 
   tbody td {
