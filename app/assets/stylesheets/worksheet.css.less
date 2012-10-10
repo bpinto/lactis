@@ -6,47 +6,63 @@ table.worksheet {
 
   thead tr {
     background-color: @white;
-  }
 
-  thead tr th {
-    padding-bottom: 0;
-  }
+    th:first-child {
+      .box-rotate(-90deg);
+      .box-rotate-origin(0%, 100%);
+      .box-round(8px 8px 0 0);
+      .font-xxxlarge;
 
-  thead tr th span {
-    border: 3px solid darken(@grayLighter, 20%);
-    border-radius: 5px 5px 0 0;
-    display: block;
-    margin: 0 -5px 0 -5px;
-    text-align: center;
-  }
+      background-color: @green;
+      bottom: 0px;
+      color: @white;
+      font-variant: small-caps;
+      position: absolute;
+      text-align: right;
 
-  thead tr th:first-child {
-    .box-rotate(-90deg);
-    .box-rotate-origin(0%, 100%);
-    .box-round(8px 8px 0 0);
-    .font-xxxlarge;
-
-    background-color: @green;
-    bottom: 0px;
-    color: @white;
-    font-variant: small-caps;
-    padding-bottom: 5px; /* default value restored */
-    position: absolute;
-    text-align: right;
-
-    width: 105px; /* this needs to be calculated by javascript and rails (js-less) */
-  }
-
-  tbody td {
-    border-color: @white;
-    color: @white;
-    font-weight: bold;
-
-    &.odd {
-      background-color: darken(@grayLighter, 5%);
+      width: 105px; /* this needs to be calculated by javascript and rails (js-less) */
     }
-    &.even {
-      background-color: darken(@grayLighter, 10%);
+
+    th + th {
+      padding-left: 7px;
+      padding-right: 7px;
+      padding-bottom: 0;
+    }
+
+    th span {
+      border: 3px solid darken(@grayLighter, 20%);
+      border-radius: 10px 10px 0 0;
+      display: block;
+      margin: 0 -5px 0 -5px;
+      text-align: center;
+    }
+  }
+
+  tbody {
+    tr:first-child td {
+      border-top: 0;
+      width: 100px; /*TODO: deletar*/
+    }
+
+    td {
+      border-color: @white;
+      color: @white;
+      font-weight: bold;
+
+      &.odd {
+        background-color: darken(@grayLighter, 5%);
+      }
+      &.even {
+        background-color: darken(@grayLighter, 10%);
+      }
+    }
+
+    td.space {
+      border-color: @grayLighter;
+      border-bottom: 0;
+      border-left: 4px;
+      border-right: 0;
+      border-style: solid;
     }
   }
 }
