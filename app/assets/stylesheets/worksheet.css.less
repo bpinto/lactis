@@ -2,6 +2,7 @@
 
 table.worksheet {
   background-color: @grayLighter;
+  margin-bottom: 1px;
   position: relative;
 
   .space {
@@ -17,7 +18,7 @@ table.worksheet {
       .box-round(8px 8px 0 0);
       .font-xxxlarge;
 
-      background-color: @green;
+      background-color: rgb(131, 192, 75); /* this needs to be calculated by javascript and rails (js-less) */
       bottom: 0px;
       color: @white;
       font-variant: small-caps;
@@ -63,5 +64,15 @@ table.worksheet {
         background-color: darken(@grayLighter, 10%);
       }
     }
+  }
+}
+
+table.worksheet + table.worksheet {
+  thead tr th:first-child {
+    background-color: rgb(0, 132, 189); /* this needs to be calculated by javascript and rails (js-less) */
+  }
+
+  thead th + th {
+    display: none;
   }
 }
