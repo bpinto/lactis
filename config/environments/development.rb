@@ -32,6 +32,6 @@ Lactis::Application.configure do
   # Do not compress assets
   config.assets.compress = false
 
-  # Expands the lines which load the assets
-  config.assets.debug = true
+  # Do not expands the lines which load the assets
+  config.assets.debug = false
 end
